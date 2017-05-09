@@ -3,3 +3,5 @@
 Life-saving app!
 
 Technologies: Spring, Maven.
+
+IDE: Eclipse (prefered), IntelliJ
