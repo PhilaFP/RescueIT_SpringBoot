@@ -29,14 +29,14 @@ public class ReportController {
     @Autowired
     private ReportRepository reportRepository;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/main", method = RequestMethod.GET)
     public String getAddNewReport(Model model){
         Report newReport = new Report();
         model.addAttribute("newReport", newReport);
         return "addReport";
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @RequestMapping(value = "/main", method = RequestMethod.POST)
     public String procesAddNewReport(@ModelAttribute("newReport")  Report newReport) { 	
     	  	
     	try {
@@ -45,7 +45,7 @@ public class ReportController {
             System.out.println(ex.getCause().getMessage());
         }       
     	   	        
-        return "redirect:/";
+        return "redirect:/main";
     }
     
     @Autowired

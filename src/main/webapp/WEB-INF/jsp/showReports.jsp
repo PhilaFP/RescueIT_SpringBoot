@@ -13,28 +13,38 @@
 <body>
 <header>
     <div onclick="myFun3()" id="divmenu"><img src="<c:url value="/css/menu.png" />"></div>
-    <div><img src="http://www.wopr.tarnow.pl/wp-content/uploads/2012/12/WOPR.png"></div>
+    <div><a href = "http://localhost:8081/main"><img src="http://www.wopr.tarnow.pl/wp-content/uploads/2012/12/WOPR.png"></a></div>
 </header>
 <nav id="navMain">
     <ul>
-        <li>Jak pomagać?</li>
-        <li>Mapa AED</li>
-        <li>Rejestracja</li>
-        <li>Ustawienia</li>
-        <li>Pomoc</li>
+        <li><a href = "http://localhost:8081/show"> Przyjęte zgłoszenia</a> </li>
+        <li><a>Jak pomagać?</a></li>
+        <li><a>Mapa AED</a></li>
+        <li><a href = "http://localhost:8081/register">Rejestracja</a></li>
+        <li><a>Ustawienia</a></li>
+        <li><a>Pomoc</a></li>
     </ul>
 </nav>
 
-<div id="TitleList">
-   <p>Zgłoszenia w systemie:</p>
-</div>
 
-<section id = "SectionList">
-   <c:forEach items="${reports}" var="report">
-        <ul>
-           <li> ${report.id} ${report.message} ${report.reportTime} ${report.idUser} ${report.idLifeguard}</li>
-        </ul>
+<section id="SectionTable">
+    <div id="TitleTable">
+        Zgłoszenia w systemie:
+    </div>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>Typ</th>
+            <th>Data</th>
+            <th>Zgłaszający</th>
+            <th>Ratownik</th>
+        </tr>
+    <c:forEach items="${reports}" var="report">
+            <tr>
+                <td>${report.id}</td> <td> ${report.message}</td> <td>${report.reportTime}</td> <td>${report.idUser}</td> <td>${report.idLifeguard}</td>
+            </tr>
     </c:forEach>
+    </table>
 </section>
 
 

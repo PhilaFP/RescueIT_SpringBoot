@@ -40,6 +40,6 @@ public class UserController {
             System.out.println(ex.getCause().getMessage());
         }       
     	   	        
-        return "redirect:/";
+        return "redirect:/main";
     }
 }

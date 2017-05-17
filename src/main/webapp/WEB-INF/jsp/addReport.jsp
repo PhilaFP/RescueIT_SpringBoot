@@ -13,16 +13,16 @@
 <body>
 <header>
     <div onclick="myFun3()" id="divmenu"><img src="<c:url value="/css/menu.png" />"></div>
-    <div><img src="http://www.wopr.tarnow.pl/wp-content/uploads/2012/12/WOPR.png"></div>
+    <div><a href = "http://localhost:8081/main"><img src="http://www.wopr.tarnow.pl/wp-content/uploads/2012/12/WOPR.png"></a></div>
 </header>
 <nav id="navMain">
     <ul>
-    	<li><a href = "http://localhost:8081/show"> Przyjęte zgłoszenia</a> </li>
-        <li>Jak pomagać?</li>
-        <li>Mapa AED</li>
-        <li>Rejestracja</li>
-        <li>Ustawienia</li>
-        <li>Pomoc</li>
+        <li><a href = "http://localhost:8081/show"> Przyjęte zgłoszenia</a> </li>
+        <li><a>Jak pomagać?</a></li>
+        <li><a>Mapa AED</a></li>
+        <li><a href = "http://localhost:8081/register"> Rejestracja</a></li>
+        <li><a>Ustawienia</a></li>
+        <li><a>Pomoc</a></li>
     </ul>
 </nav>
 <section id="sectionMainContent">
