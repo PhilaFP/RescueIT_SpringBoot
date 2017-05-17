@@ -1,9 +1,12 @@
 package com.RescueIT.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -25,8 +28,12 @@ public class UserController {
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public String procesAddNewUser(@ModelAttribute("newUser") User newUser) {
+    public String procesAddNewUser(@ModelAttribute("newUser") @Valid User newUser, BindingResult bindingResult) {
 	
+    	if (bindingResult.hasErrors()) {
+            return "addUser";
+        }
+    	
     	try {
     		userRepository.save(newUser);
     	} catch (DataAccessException ex) {

@@ -29,10 +29,15 @@
     <div id="divFormTitle">Podaj dane:</div>
     <form:form method="POST" modelAttribute="newUser"> <br>
         <form:input type="text" path="name"  name="name"  label="name" /> <br>
+        <form:errors path="name" /> <br>
         <form:input type="text" path="surname"  name="surname"  label="surname" /> <br>
+        <form:errors path="surname" /> <br>
         <form:input type="text" path="username"  name="username"  label="username" /> <br>
+        <form:errors path="username" /> <br>
         <form:input type="text" path="pesel"  name="pesel"  label="pesel" /> <br>
+        <form:errors path="pesel" /> <br>
         <form:input type="text" path="password"  name="password"  label="password" /> <br>
+        <form:errors path="password" /> <br>
         <input type="submit" value="Wyślij">
     </form:form>
 </section>

@@ -18,6 +18,12 @@ public class Report {
 	@Column
     private String message;
 
+	@Column
+	private Integer idLifeguard;
+	
+	@Column
+	private Integer idUser;
+	
     public String getMessage() {
         return message;
 

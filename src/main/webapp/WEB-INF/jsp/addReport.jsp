@@ -37,7 +37,7 @@
     <div id="divFormTitle">Podaj przyczynę wezwania pomocy:</div>
     <form:form modelAttribute="newReport">
 
-        <form:radiobutton onchange="myFun2()" path="message" name="characterAccident" value="Sinking" label="Ktoś się topi" /> <br>
+        <form:radiobutton onchange="myFun2()" path="message" name="characterAccident" value="Sinking" checked="checked" label="Ktoś się topi" /> <br>
         <form:radiobutton onchange="myFun2()" path="message" name="characterAccident" value="Someone" label="Widzę osobę, która się nie rusza" /> <br>
         <form:radiobutton onchange="myFun2()" path="message" name="characterAccident" value="Child" label="Nie mogę znaleźć dziecka" /> <br>
         <form:radiobutton onchange="myFun2()" path="message" name="characterAccident" value="WaterEquipment" label="Mój rower wodny / łódź utracił możliwość sterowania" /> <br>

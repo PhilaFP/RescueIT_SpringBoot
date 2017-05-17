@@ -5,6 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 @Entity
 public class User {
@@ -13,18 +16,24 @@ public class User {
     private Integer id;
 	
 	@Column
+	@Size(min=2, max=30, message="{Długosć imienia powinna mieścić się w przedziale od 2 do 30 znaków}")
 	private String name;
 	
 	@Column
+	@NotNull
+	@Size(min=2, max=30, message="{Długosć nazwiska powinna mieścić się w przedziale od 2 do 30 znaków}")
 	private String surname;
 	
 	@Column
+	@Size(min=6, max=12, message="{Nazwa użytkownika powinna mieścić się w przedziale od 6 do 12 znaków}")
 	private String username;
 	
 	@Column
+	@Pattern(regexp="\\d{11}", message="{Błędny numer PESEL}")
 	private String pesel;
 	
 	@Column
+	@Size(min=6, max=12, message="{Hasło powinno zawierać od 6 do 12 znaków}")
 	private String password;
 
 	    public User(){}
