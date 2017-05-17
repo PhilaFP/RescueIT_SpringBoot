@@ -32,7 +32,7 @@
 <section id = "SectionList">
    <c:forEach items="${reports}" var="report">
         <ul>
-           <li> ${report.message} </li>
+           <li> ${report.id} ${report.message} ${report.reportTime} ${report.idUser} ${report.idLifeguard}</li>
         </ul>
     </c:forEach>
 </section>
